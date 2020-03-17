@@ -1,0 +1,16 @@
+﻿@model IEnumerable<EmployeeManagement.Models.Employee>
+@{
+    ViewBag.Title = "Details";
+}
+    @foreach (var emp in Model)
+    {
+        <p>@emp.Id</p>
+        <p>@emp.Name</p>
+        <p>@emp.Email</p>
+        <p>@emp.Department</p>
+    }
+@section Script
+{
+    <script src="JavaScripts/CustomScript.js"></script>
+}
+
