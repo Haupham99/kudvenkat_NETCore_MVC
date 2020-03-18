@@ -30,6 +30,7 @@ namespace EmployeeManagement
             }
 
             app.UseStaticFiles();
+            
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

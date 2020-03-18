@@ -1,16 +1,27 @@
-﻿@model IEnumerable<EmployeeManagement.Models.Employee>
+﻿@model Employee
 @{
     ViewBag.Title = "Details";
 }
-    @foreach (var emp in Model)
-    {
-        <p>@emp.Id</p>
-        <p>@emp.Name</p>
-        <p>@emp.Email</p>
-        <p>@emp.Department</p>
-    }
-@section Script
-{
-    <script src="JavaScripts/CustomScript.js"></script>
-}
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1>@Model.Name</h1>
+                </div>
 
+                <div class="card-body text-center">
+                    <img src="~/images/avatar.jfif" alt="" class="card-img-top" />
+
+                    <h4>Employee ID : @Model.Id</h4>
+                    <h4>Email : @Model.Email</h4>
+                    <h4>Department : @Model.Department</h4>
+                </div>
+
+                <div class="card-footer text-center">
+                    <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
+                    <a href="" class="btn btn-primary">Edit</a>
+                    <a href="" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>

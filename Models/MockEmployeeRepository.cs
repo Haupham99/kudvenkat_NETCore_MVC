@@ -22,5 +22,9 @@ namespace EmployeeManagement.Models
         {
             return listEmployees.Find(emp => emp.Id == Id);
         }
+        public List<Employee> GetAllEmployees()
+        {
+            return listEmployees;
+        }
     }
 }

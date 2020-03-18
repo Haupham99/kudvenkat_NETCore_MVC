@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.Controllers
 {
+    [Route("")]
     public class HomeController : Controller
     {
         private readonly IEmployeeRepository _mockEmployeeRepository;
@@ -16,19 +17,19 @@ namespace EmployeeManagement.Controllers
         {
             _mockEmployeeRepository = mockEmployeeRepository;
         }
+        [Route("")]
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Details()
-        {
-            ViewData["Title1"] = "Hậu Phạm";
-            ViewBag.Title = "Pages Detail";
-            List<Employee> empList = new List<Employee>();
-            empList.Add(_mockEmployeeRepository.GetEmployee(1));
-            empList.Add(_mockEmployeeRepository.GetEmployee(2));
+            List<Employee> empList = _mockEmployeeRepository.GetAllEmployees();
             return View(empList);
+        }
+        [Route("/{id?}")]
+        public IActionResult Details(int? id)
+        {
+            ViewBag.Title = "Pages Detail";
+            Employee emp = new Employee();
+            emp = _mockEmployeeRepository.GetEmployee(id ?? 1);
+            return View(emp);
         }
     }
 }

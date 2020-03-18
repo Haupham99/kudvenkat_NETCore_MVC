@@ -1,7 +1,25 @@
-﻿@{
+﻿@model List<Employee>
+@{
     ViewBag.Title = "List";
 }
 @section Script
 {
     <script src="JavaScripts/CustomScript.js"></script>
 }
+
+<div class="card-deck">
+    @foreach(var emp in Model)
+    {
+        <div class="card m-3">
+            <div class="card-header">
+                <h3>@emp.Name</h3>                
+            </div>
+            <img class="card-img-top" src="~/images/avatar.jfif" alt="Avatar" />
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="details" asp-route-id="@emp.Id" class="btn btn-primary">View</a>
+                <a href="" class="btn btn-primary">Edit</a>
+                <a href="" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+     }
+</div>
