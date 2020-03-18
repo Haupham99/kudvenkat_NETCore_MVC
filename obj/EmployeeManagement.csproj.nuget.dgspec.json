@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HAU\\Desktop\\MISA\\kudvenkat_NETCore_MVC\\EmployeeManagement.csproj": {}
+    "C:\\Users\\pvhau.RD\\Desktop\\New folder\\kudvenkat_NETCore_MVC\\EmployeeManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HAU\\Desktop\\MISA\\kudvenkat_NETCore_MVC\\EmployeeManagement.csproj": {
+    "C:\\Users\\pvhau.RD\\Desktop\\New folder\\kudvenkat_NETCore_MVC\\EmployeeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HAU\\Desktop\\MISA\\kudvenkat_NETCore_MVC\\EmployeeManagement.csproj",
+        "projectUniqueName": "C:\\Users\\pvhau.RD\\Desktop\\New folder\\kudvenkat_NETCore_MVC\\EmployeeManagement.csproj",
         "projectName": "EmployeeManagement",
-        "projectPath": "C:\\Users\\HAU\\Desktop\\MISA\\kudvenkat_NETCore_MVC\\EmployeeManagement.csproj",
-        "packagesPath": "C:\\Users\\HAU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HAU\\Desktop\\MISA\\kudvenkat_NETCore_MVC\\obj\\",
+        "projectPath": "C:\\Users\\pvhau.RD\\Desktop\\New folder\\kudvenkat_NETCore_MVC\\EmployeeManagement.csproj",
+        "packagesPath": "C:\\Users\\pvhau.RD\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pvhau.RD\\Desktop\\New folder\\kudvenkat_NETCore_MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\HAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\pvhau.RD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

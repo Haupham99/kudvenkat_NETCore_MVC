@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.Controllers
 {
-    [Route("")]
+   
     public class HomeController : Controller
     {
         private readonly IEmployeeRepository _mockEmployeeRepository;
@@ -23,13 +23,24 @@ namespace EmployeeManagement.Controllers
             List<Employee> empList = _mockEmployeeRepository.GetAllEmployees();
             return View(empList);
         }
-        [Route("/{id?}")]
+       
         public IActionResult Details(int? id)
         {
             ViewBag.Title = "Pages Detail";
             Employee emp = new Employee();
             emp = _mockEmployeeRepository.GetEmployee(id ?? 1);
             return View(emp);
+        }
+        [HttpPost]
+        public RedirectToActionResult Create(Employee emp)
+        {
+            Employee newEmp = _mockEmployeeRepository.AddEmployee(emp);
+            return RedirectToAction("Details", new { id = newEmp.Id });
+        }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }
