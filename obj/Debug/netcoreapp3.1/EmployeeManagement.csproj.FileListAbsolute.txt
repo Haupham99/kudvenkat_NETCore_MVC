@@ -316,3 +316,4 @@ C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\EmployeeManagement.dll
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\EmployeeManagement.pdb
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
+C:\Users\HAU\Desktop\MISA\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
