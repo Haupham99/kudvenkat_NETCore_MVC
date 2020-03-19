@@ -29,7 +29,7 @@ namespace EmployeeManagement.Models
 
         public Employee AddEmployee(Employee emp)
         {
-            //emp.Id = listEmployees.Max(e => e.Id) + 1;
+            emp.Id = listEmployees.Max(e => e.Id) + 1;
             this.listEmployees.Add(emp);
             return emp;
         }

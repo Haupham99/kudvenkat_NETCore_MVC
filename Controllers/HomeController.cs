@@ -32,10 +32,13 @@ namespace EmployeeManagement.Controllers
             return View(emp);
         }
         [HttpPost]
-        public RedirectToActionResult Create(Employee emp)
+        public IActionResult Create(Employee emp)
         {
-            Employee newEmp = _mockEmployeeRepository.AddEmployee(emp);
-            return RedirectToAction("Details", new { id = newEmp.Id });
+            if (ModelState.IsValid) { 
+                Employee newEmp = _mockEmployeeRepository.AddEmployee(emp);
+                return RedirectToAction("Details", new { id = newEmp.Id });
+            }
+            return View();
         }
         [HttpGet]
         public IActionResult Create()

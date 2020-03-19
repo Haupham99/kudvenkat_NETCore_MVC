@@ -9,10 +9,15 @@ namespace EmployeeManagement.Models
     public class Employee
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Mời nhập tên đăng nhập !")]
+        
+        
         public string Name { get; set; }
         [Required]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Địa chỉ email không hợp lệ !")]
+        [Display(AutoGenerateField = false, Name = "Địa chỉ Email")]
         public string Email { get; set; }
-        public Dept Department { get; set; }
+        [Required]
+        public Dept? Department { get; set; }
     }
 }

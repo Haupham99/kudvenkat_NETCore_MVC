@@ -296,7 +296,6 @@ C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\bin\Debug\netcoreapp3
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\EmployeeManagement.csprojAssemblyReference.cache
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\staticwebassets\EmployeeManagement.StaticWebAssets.Manifest.cache
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\staticwebassets\EmployeeManagement.StaticWebAssets.xml
-C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\EmployeeManagement.RazorAssemblyInfo.cache
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\EmployeeManagement.RazorAssemblyInfo.cs
 C:\Users\pvhau.RD\Desktop\New folder\kudvenkat_NETCore_MVC\obj\Debug\netcoreapp3.1\EmployeeManagement.AssemblyInfoInputs.cache
