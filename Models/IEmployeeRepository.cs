@@ -11,5 +11,7 @@ namespace EmployeeManagement.Models
         List<Employee> GetAllEmployees();
 
         Employee AddEmployee(Employee emp);
+        Employee UpdateEmployee(Employee emp);
+        Employee DeleteEmployee(int Id);
     }
 }
