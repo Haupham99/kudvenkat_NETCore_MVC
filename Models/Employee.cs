@@ -17,7 +17,7 @@ namespace EmployeeManagement.Models
         [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Địa chỉ email không hợp lệ !")]
         [Display(AutoGenerateField = false, Name = "Địa chỉ Email")]
         public string Email { get; set; }
-        [Required]
+        //[Required]
         public Dept? Department { get; set; }
     }
 }

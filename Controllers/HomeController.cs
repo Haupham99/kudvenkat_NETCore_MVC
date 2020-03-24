@@ -20,7 +20,7 @@ namespace EmployeeManagement.Controllers
         [Route("")]
         public IActionResult Index()
         {
-            List<Employee> empList = _mockEmployeeRepository.GetAllEmployees();
+            IEnumerable<Employee> empList = _mockEmployeeRepository.GetAllEmployees();
             return View(empList);
         }
        

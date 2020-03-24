@@ -43,15 +43,10 @@ namespace EmployeeManagement.Models
 
         public Employee UpdateEmployee(Employee emp)
         {
-            Employee employee = _context.Employees.Find(emp.Id);
-            if(employee != null)
-            {
-                employee.Name = emp.Name;
-                employee.Email = emp.Email;
-                employee.Department = emp.Department;
-                _context.SaveChanges();
-            }
-            return employee;
+            var employee = _context.Employees.Attach(emp);
+            employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.SaveChanges();
+            return emp;
         }
     }
 }

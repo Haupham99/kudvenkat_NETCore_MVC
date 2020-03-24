@@ -22,7 +22,7 @@ namespace EmployeeManagement.Models
         {
             return listEmployees.Find(emp => emp.Id == Id);
         }
-        public List<Employee> GetAllEmployees()
+        public IEnumerable<Employee> GetAllEmployees()
         {
             return listEmployees;
         }
