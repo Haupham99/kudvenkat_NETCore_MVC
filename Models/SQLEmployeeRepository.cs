@@ -31,9 +31,9 @@ namespace EmployeeManagement.Models
             return emp;
         }
 
-        public IEnumerable<Employee> GetAllEmployees()
+        public List<Employee> GetAllEmployees()
         {
-            return _context.Employees;
+            return _context.Employees.ToList();
         }
 
         public Employee GetEmployee(int Id)
