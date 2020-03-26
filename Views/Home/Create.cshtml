@@ -1,28 +1,52 @@
-﻿@model Employee
-@inject IEmployeeRepository _employeeRepository
+﻿@model EmployeeCreateViewModel
 
 @{ 
     ViewBag.Title = "Create Employee";
 }
     
-    <form asp-action="Create" asp-controller="Home" method="post">
+    <form enctype="multipart/form-data" asp-action="Create" asp-controller="Home" method="post">
         <div asp-validation-summary="All" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="Name">Name : </label>
-            <input class="form-control" asp-for="Name" />
+        <div class="form-group row">
+            <label class="col-sm-2" asp-for="Name">Name : </label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="Name" />
+            </div>
             @*<span asp-validation-for="Name" class="text-danger"></span>*@
         </div>
-        <div class="form-group">
-            <label asp-for="Email">Email : </label>
-            <input class="form-control" asp-for="Email" />
+        <div class="form-group row">
+            <label class="col-sm-2" asp-for="Email">Email : </label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="Email" />
+            </div>
             @*<span asp-validation-for="Email" class="text-danger"></span>*@
         </div>
-        <div class="form-group">
-            <label asp-for="Department">Department : </label>
-            <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()">
-                <option value="">Please Select</option>
-            </select>
+        <div class="form-group row">
+            <label class="col-sm-2" asp-for="Department">Department : </label>
+            <div class="col-sm-10">
+                <select asp-for="Department" asp-items="Html.GetEnumSelectList<Dept>()">
+                    <option value="">Please Select</option>
+                </select>
+            </div>
         </div>
-        <div>Number Of Employees : @_employeeRepository.GetAllEmployees().Count()</div>
+        <div class="form-group row">
+            <label class="col-sm-2" asp-for="Photo">Photo : </label>
+            <div class="col-sm-10">
+                <div class="custom-file">
+                    <input class="form-control custom-file-input" asp-for="Photo" />
+                    <label class="custom-file-label">Choose File ... </label>
+                </div>
+            </div>
+            @*<span asp-validation-for="Email" class="text-danger"></span>*@
+        </div>
         <input type="submit" name="submit" value="Submit" class="btn btn-danger" />
     </form>
+    @section Scripts {
+        <script>
+            $(document).ready(function () {
+                $(".custom-file-input").on("change", function () {
+                    var fileName = $(this).val().split("\\").pop();
+                    $(this).next(".custom-file-label").html(fileName);
+                })
+            })
+        </script>
+    }

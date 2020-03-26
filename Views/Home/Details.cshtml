@@ -1,26 +1,27 @@
-﻿@model Employee
+﻿@model HomeDetailsViewModel
 @{
     ViewBag.Title = "Details";
+    var pathImage = "~/Images/" + (Model.Employee.PhotoPath ?? "avatar.jfif");
 }
     <div class="row justify-content-center m-3">
         <div class="col-sm-8">
             <div class="card">
                 <div class="card-header">
-                    <h1>@Model.Name</h1>
+                    <h1>@Model.Employee.Name</h1>
                 </div>
 
                 <div class="card-body text-center">
-                    <img src="~/images/avatar.jfif" alt="" class="card-img-top" asp-append-version="true"/>
+                    <img src="@pathImage" alt="" class="card-img-top" asp-append-version="true"/>
 
-                    <h4>Employee ID : @Model.Id</h4>
-                    <h4>Email : @Model.Email</h4>
-                    <h4>Department : @Model.Department</h4>
+                    <h4>Employee ID : @Model.Employee.Id</h4>
+                    <h4>Email : @Model.Employee.Email</h4>
+                    <h4>Department : @Model.Employee.Department</h4>
                 </div>
 
                 <div class="card-footer text-center">
                     <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
-                    <a href="" class="btn btn-primary">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
+                    <a asp-controller="home" asp-action="edit" class="btn btn-primary">Edit</a>
+                    <a asp-controller="home" asp-action="delete" asp-route-id="@Model.Employee.Id" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>
