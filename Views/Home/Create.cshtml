@@ -29,24 +29,29 @@
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2" asp-for="Photo">Photo : </label>
+            <label class="col-sm-2" asp-for="Photos">Photo : </label>
             <div class="col-sm-10">
                 <div class="custom-file">
-                    <input class="form-control custom-file-input" asp-for="Photo" />
+                    <input multiple class="form-control custom-file-input" asp-for="Photos" />
                     <label class="custom-file-label">Choose File ... </label>
                 </div>
             </div>
             @*<span asp-validation-for="Email" class="text-danger"></span>*@
         </div>
-        <input type="submit" name="submit" value="Submit" class="btn btn-danger" />
+        <input type="submit" name="submit" value="Submit" class="btn btn-primary" />
     </form>
     @section Scripts {
         <script>
             $(document).ready(function () {
                 $(".custom-file-input").on("change", function () {
-                    var fileName = $(this).val().split("\\").pop();
-                    $(this).next(".custom-file-label").html(fileName);
-                })
+                    var listFiles = $(this)[0]["files"];
+                    var fileLabel = $(this).next(".custom-file-label");
+                    if (listFiles.length > 1) {
+                        fileLabel.html(listFiles.length + " files selected");
+                    } else if (listFiles.length == 1) {
+                        fileLabel.html(listFiles[0]["name"]);
+                    }
+                });
             })
         </script>
     }
